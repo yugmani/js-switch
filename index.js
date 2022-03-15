@@ -28,6 +28,8 @@ switch(x) {</br>
 <li>If the equality is found, switch starts to execute the code starting from the corresponding case, until the nearest break (or until the end of switch).</li>
 <li>If no case is matched then the default code is executed (if it exists).</li>
 <li>If there is no break then the execution continues with the next case without any checks.</li>
+<li>Several variants of case which share the same code can be grouped.</li>
+<li>The equality check is always strict. The values must be of the same type to match.</li>
 </ul>
 `;
 
@@ -50,8 +52,8 @@ if (browser === 'Edge') {
 }
 
 //Rewrite "if" into "switch"
-let a = +prompt('a?', '');
-// let a = '';
+// let a = +prompt('a?', '');
+let a = '';
 switch (a) {
   case 0:
     console.log(0);
